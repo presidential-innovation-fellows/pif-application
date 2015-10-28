@@ -1,0 +1,1 @@
+CKEDITOR.on("dialogDefinition",function(b){var a=b.data.name,b=b.data.definition;"table"==a||"tableProperties"==a?(a=b.getContents("info"),a.remove("cmbAlign"),a.remove("txtSummary"),a.remove("txtCellSpace"),a.remove("txtCellPad")):"cellProperties"==a&&(a=b.getContents("info"),a.remove("hAlign"),a.remove("vAlign"),a.remove("borderColor"),a.remove("borderColorChoose"))});
