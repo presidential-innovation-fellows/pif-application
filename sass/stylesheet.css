@@ -1,3 +1,189 @@
+@font-face {
+  font-family: 'Avenir Light';
+  src: url("../fonts/AvenirLTStd-Light.eot");
+  src: url("../fonts/AvenirLTStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirLTStd-Light.svg#webfont") format("svg"), url("../fonts/AvenirLTStd-Light.woff") format("woff"), url("../fonts/AvenirLTStd-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url("../fonts/AvenirLTStd-Medium.eot");
+  src: url("../fonts/AvenirLTStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirLTStd-Medium.svg#webfont") format("svg"), url("../fonts/AvenirLTStd-Medium.woff") format("woff"), url("../fonts/AvenirLTStd-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url("../fonts/AvenirLTStd-Heavy.eot");
+  src: url("../fonts/AvenirLTStd-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirLTStd-Heavy.svg#webfont") format("svg"), url("../fonts/AvenirLTStd-Heavy.woff") format("woff"), url("../fonts/AvenirLTStd-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  position: relative;
+  min-height: 100%; }
 
+body {
+  font-family: 'Avenir Light'; }
+  body strong {
+    font-family: 'Avenir Medium'; }
+  body h1 {
+    font-size: 3.7em; }
+  body h2 {
+    font-size: 3.1em; }
+  body h3 {
+    font-family: 'Avenir Heavy';
+    font-size: 2.1em;
+    padding-bottom: 20px;
+    color: #555555; }
+  body h4 {
+    font-size: 1.6em;
+    line-height: 30px; }
+  body h5, body .highlight {
+    font-size: 1.3em;
+    line-height: 28px;
+    color: #333333; }
+
+.navbar {
+  background-color: transparent;
+  border-color: transparent; }
+  .navbar .navbar-brand {
+    font-size: 1em; }
+    .navbar .navbar-brand img {
+      height: 50px; }
+  .navbar .btn {
+    font-size: 1.5em;
+    letter-spacing: 1px; }
+  .navbar .navbar-btn {
+    margin-top: 19px;
+    margin-left: 20px; }
+  .navbar h4 {
+    color: #eeeeee; }
+  .navbar .nav h4 {
+    letter-spacing: 2px; }
+
+.nav-bg {
+  background-color: #3C547C;
+  border-color: #2D3D59;
+  transition: 0.25s; }
+
+#footer {
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 75px;
+  background-color: #3C547C; }
+  #footer #footer-text {
+    margin-top: 50px;
+    margin-bottom: 25px; }
+  #footer ul {
+    list-style-type: none;
+    padding-left: 0px; }
+    #footer ul li h4 {
+      color: #eeeeee; }
+    #footer ul li a {
+      color: #eeeeee; }
+      #footer ul li a:hover, #footer ul li a:focus {
+        text-decoration: none; }
+  #footer #social li {
+    display: inline; }
+  #footer #social li + li {
+    margin-left: 10px; }
+  #footer #social h4 {
+    color: #eeeeee; }
+  #footer #social a {
+    color: #eeeeee; }
+    #footer #social a:hover, #footer #social a:focus {
+      text-decoration: none; }
+  #footer #social #mc_embed_signup {
+    background: none;
+    color: #eeeeee;
+    font: 15px; }
+    #footer #social #mc_embed_signup label {
+      font-size: 1.5em; }
+    #footer #social #mc_embed_signup form {
+      padding-left: 0px; }
+    #footer #social #mc_embed_signup input.button {
+      padding-top: 2px; }
+    #footer #social #mc_embed_signup input.email {
+      min-width: 100%;
+      color: #222222; }
+  #footer img {
+    display: block; }
+  #footer #gov-links a, #footer #gov-links p {
+    color: #eeeeee; }
+  #footer #gov-links p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #eeeeee;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #eeeeee; }
+  #footer #disclaimer {
+    margin-top: 25px; }
+    #footer #disclaimer a, #footer #disclaimer p {
+      color: #eeeeee; }
+    #footer #disclaimer p {
+      padding-top: 5px; }
+
+#header {
+  margin-top: 125px; }
+
+#content {
+  margin-bottom: 100px; }
+  #content p {
+    font-size: 14px; }
+
+@media (min-width: 992px) {
+  body {
+    margin-bottom: 650px; }
+
+  .navbar .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px; }
+  .navbar .navbar-brand #navbar-logo-alt {
+    display: none; }
+  .navbar .navbar-brand #navbar-logo {
+    display: block; } }
+@media (max-width: 1000px) {
+  body {
+    padding: 0px; } }
+@media (max-width: 991px) {
+  .navbar .navbar-brand #navbar-logo {
+    display: none; }
+  .navbar .navbar-brand #navbar-logo-alt {
+    display: block; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    margin-bottom: 650px; }
+
+  .navbar .container-fluid {
+    padding-left: 25px;
+    padding-right: 25px; } }
+@media (max-width: 767px) {
+  body {
+    margin-bottom: 775px; }
+
+  .navbar {
+    min-height: 81px; }
+    .navbar .navbar-toggle {
+      margin-top: 21px; }
+    .navbar .navbar-collapse {
+      margin-top: 21px; }
+
+  #hero {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  #footer {
+    height: 775px; }
+    #footer #footer-text {
+      text-align: center; }
+    #footer img {
+      margin-left: auto;
+      margin-right: auto; }
+    #footer #gov-links {
+      text-align: center; }
+    #footer #disclaimer {
+      text-align: center; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

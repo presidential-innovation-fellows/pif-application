@@ -12,9 +12,12 @@
   <script src="js/ckeditor.js?t=4.4.6.4" type="text/javascript"></script>
   <script src="js/link_override.js" type="text/javascript"></script>
   <script src="js/table_override.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
   <link class="user" href="css/baseline.css" rel="stylesheet" type="text/css" />
   <link class="user" href="css/style.css" rel="stylesheet" type="text/css" />
-  <link href="sass/styleshee.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="fonts/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="sass/stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -505,6 +508,37 @@ $(function() {
 
 </head>
 
+<header>
+
+  <nav class="navbar navbar-default navbar-fixed-top nav-bg" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://presidentialinnovationfellows.gov">
+          <img id="navbar-logo" src="images/pif-header-full.png">
+          <img id="navbar-logo-alt" src="images/pif-header-logo-only.png">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://presidentialinnovationfellows.gov/fellows"><h4>FELLOWS</h4></a></li>
+          <li><a href="https://presidentialinnovationfellows.gov/projects"><h4>PROJECTS</h4></a></li>
+          <li><a href="https://presidentialinnovationfellows.gov/agencies"><h4>AGENCIES</h4></a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+</header>
+
 <div class="container clearfix">
   <div id="header"><img src="images/pif-logo.png" alt="Presidential Innovation Fellows seal" height="315" width="315" />
     <h1>Presidential Innovation Fellows</h1>
@@ -826,7 +860,7 @@ $(function() {
         var editor = CKEDITOR.replace('appPage:appForm:frmResume', {
           removePlugins : 'elementspath,maximize,image,tabletools,liststyle,contextmenu,resize',
           baseHref : protocolAndHost + '/ckeditor/ckeditor-4.x/rel/',
-          customConfig : '/ckeditor/ckeditor-4.x/rel/sfdc-config.js',
+          customConfig : 'https://apply.pif.gov/ckeditor/ckeditor-4.x/rel/sfdc-config.js',
           height : '200',
           bodyId : 'appPage:appForm:frmResume_rta_body',
           toolbar : 'Visualforce',
@@ -951,7 +985,7 @@ $(function() {
   </p>
 
   <style>
-  #lblInptHuman {font-size:.8em; line-height:1.5em; margin:10px 0;}
+  #lblInptHuman {font-size:14px; line-height:1.5em; margin:10px 0;}
   </style> 
   <br />              
   <div id="divQuestion">
@@ -978,6 +1012,90 @@ $(function() {
 </form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden"  id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="i: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" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="201510261952400985" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AJHDBcUCfWAy+h5ZfueWd9LjqDkn" /></span></span>
 </div>
 </div>
+
+<footer>
+
+  <div class="container-fluid" id="footer">
+    <div class="row" id="footer-text">
+      <div class="col-md-7 col-md-offset-1 col-sm-12">
+        <div class="row">
+          <div class="col-sm-6">
+            <ul>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/fellows">Meet the Fellows</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/projects">Project Case Studies</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/agencies">Agencies Supported</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/leadership">Leadership Team</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/about">About Us</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/events">Events</a></h4></li>
+              <li><h4><a href="https://presidentialinnovationfellows.gov/faq">FAQs</a></h4></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+            <ul>
+              <li><h4><a href="https://www.whitehouse.gov/innovationfellows" target="_blank">White House</a></h4></li>
+              <li><h4><a href="https://www.whitehouse.gov/issues" target="_blank">Presidential Priorities</a></h4></li>
+              <li><h4><a href="http://gsa.gov" target="_blank">GSA</a></h4></li>
+              <li><h4><a href="https://18f.gsa.gov" target="_blank">18F</a></h4></li>
+              <li><h4><a href="https://www.whitehouse.gov/digital/united-states-digital-service" target="_blank">USDS</a></h4></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 hidden-xs hidden-sm" id="social">
+        <!-- Begin MailChimp Signup Form -->
+        <link href="https://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+          #mc_embed_signup{background:#fff; clear:left;  }
+          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+        <form action="https://presidentialinnovationfellows.us11.list-manage.com/subscribe/post?u=8ff93f9a5662324b360f8107e&amp;id=8cec6581b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <label for="mce-EMAIL">Join our mailing list</label>
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_8ff93f9a5662324b360f8107e_8cec6581b6" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+        </div>
+
+        <!--End mc_embed_signup-->
+        <h4>Connect:</h4>
+        <ul>
+          <li><a href="https://github.com/presidential-innovation-fellows" target="blank"><i class="fa fa-github-square fa-2x"></i></a></li>
+          <li><a href="https://twitter.com/innovfellows" target="blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+          <li><a href="https://www.facebook.com/presidentialinnovationfellows" target="blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/white-house-presidential-innovation-fellows" target="blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+          <li><a href="https://angel.co/presidential-innovation-fellowship" target="blank"><i class="fa fa-angellist fa-2x"></i></a></li>
+          <li><a href="https://medium.com/presidential-innovation-fellows" target="blank"><i class="fa fa-medium fa-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1" id="gov-links">
+        <p><a href="https://presidentialinnovationfellows.gov/sitemap.xml" target="_blank">SITEMAP</a> | <a href="http://www.gsa.gov/portal/content/116609" target="_blank">PRIVACY</a> | <a href="https://18f.gsa.gov/linking-policy/" target="_blank">LINKING POLICY</a></p>
+      </div>
+    </div>
+    <div class="row" id="disclaimer">
+      <div class="col-lg-4 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-7">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/logo-gsa.png" id="gsa-logo">
+          </div>
+          <div class="col-sm-9">
+            <p>A federal government website managed by the U.S. General Services Administration. 1800 F Street Northwest, Washington, DC 20405</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-lg-offset-5 col-md-1 col-md-offset-4 col-sm-2 col-sm-offset-3 hidden-xs">
+        <a href="https://www.whitehouse.gov/innovationfellows" target="_blank"><img src="images/white-house-logo.png" class="img-responsive"></a>
+      </div>
+    </div>
+  </div>
+
+</footer>
 
 <script id="_fed_an_ua_tag" src="https://analytics.usa.gov/dap/dap.min.js"></script> 
 <script>

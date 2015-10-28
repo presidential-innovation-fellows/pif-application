@@ -1,3 +1,301 @@
-.home{
-	
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+@font-face{
+  font-family: 'Avenir Light';
+  src: url('../fonts/AvenirLTStd-Light.eot');
+  src: url('../fonts/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvenirLTStd-Light.svg#webfont') format('svg'),
+  url('../fonts/AvenirLTStd-Light.woff') format('woff'),
+  url('../fonts/AvenirLTStd-Light.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face{
+  font-family: 'Avenir Medium';
+  src: url('../fonts/AvenirLTStd-Medium.eot');
+  src: url('../fonts/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvenirLTStd-Medium.svg#webfont') format('svg'),
+  url('../fonts/AvenirLTStd-Medium.woff') format('woff'),
+  url('../fonts/AvenirLTStd-Medium.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face{
+  font-family: 'Avenir Heavy';
+  src: url('../fonts/AvenirLTStd-Heavy.eot');
+  src: url('../fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvenirLTStd-Heavy.svg#webfont') format('svg'),
+  url('../fonts/AvenirLTStd-Heavy.woff') format('woff'),
+  url('../fonts/AvenirLTStd-Heavy.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+html{
+  position:relative;
+  min-height:100%;
+}
+
+body{
+  font-family:'Avenir Light';
+  strong{
+    font-family:'Avenir Medium';
+  }
+  h1{
+    font-size:3.7em;
+  }
+  h2{
+    font-size:3.1em;
+  }
+  h3{
+    font-family:'Avenir Heavy';
+    font-size:2.1em;
+    padding-bottom:20px;
+    color:$gray;
+  }
+  h4{
+    font-size:1.6em;
+    line-height:30px;
+  }
+  h5, .highlight{
+    font-size:1.3em;
+    line-height:28px;
+    color:$gray-dark;
+  }
+}
+
+// HEADER
+.navbar{
+  background-color:transparent;
+  border-color:transparent;
+  .navbar-brand{
+    font-size:1em;
+    img{
+      height:50px;
+    }
+  }
+  .btn{
+    font-size:1.5em;
+    letter-spacing:1px;
+  }
+  .navbar-btn{
+    margin-top:19px;
+    margin-left:20px;
+  }
+  h4{
+    color:$gray-lighter;
+  }
+  .nav{
+    h4{
+      letter-spacing:2px;
+    }
+  }
+}
+.nav-bg{
+  background-color:#3C547C;
+  border-color:#2D3D59;
+  transition:0.25s;
+}
+
+// FOOTER
+#footer{
+  bottom:0px;
+  position:absolute;
+  width:100%;
+  padding-bottom:75px;
+  background-color:#3C547C;
+  #footer-text{
+    margin-top:50px;
+    margin-bottom:25px;
+  }
+  ul{
+    list-style-type: none;
+    padding-left:0px;
+    li{
+      h4{
+        color:$gray-lighter;
+      }
+      a{
+        color:$gray-lighter;
+        &:hover, &:focus{
+          text-decoration:none;
+        }
+      }
+    }
+  }
+  #social{
+    li{
+      display:inline;
+    }
+    li+li{
+      margin-left:10px;
+    }
+    h4{
+      color:$gray-lighter;
+    }
+    a{
+      color:$gray-lighter;
+      &:hover, &:focus{
+        text-decoration:none;
+      }
+    }
+    #mc_embed_signup{
+      background:none;
+      color:$gray-lighter;
+      font:15px;
+      label{
+        font-size:1.5em;
+      }
+      form{
+        padding-left:0px;
+      }
+      input.button{
+        padding-top:2px;
+      }
+      input.email{
+        min-width:100%;
+        color:$gray-darker;
+      }
+    }
+  }
+  img{
+    display:block;
+  }
+  #gov-links{
+    a, p{
+      color:$gray-lighter;
+    }
+    p{
+      padding-top:10px;
+      padding-bottom:10px;
+      border-top-style:solid;
+      border-top-width: 1px;
+      border-top-color:$gray-lighter;
+      border-bottom-style:solid;
+      border-bottom-width: 1px;
+      border-bottom-color:$gray-lighter; 
+    }
+  }
+  #disclaimer{
+    margin-top:25px;
+    a, p{
+      color:$gray-lighter;
+    }
+    p{
+      padding-top:5px;
+    }
+  }
+}
+
+// application
+#header{
+  margin-top:125px;
+}
+#content{
+  margin-bottom:100px;
+  p{
+    font-size:14px;
+  }
+}
+
+// Large and medium devices (desktops)
+@media (min-width: 992px) {
+  // GENERAL
+  body{
+    margin-bottom:650px;
+  }
+  .navbar{
+    .container-fluid{
+      padding-left:50px;
+      padding-right:50px;
+    }
+    .navbar-brand{
+      #navbar-logo-alt{
+        display:none;
+      }
+      #navbar-logo{
+        display:block;
+      }
+    }
+  }
+}
+
+// Random SalesForce CSS
+@media (max-width: 1000px) {
+  body{
+    padding:0px;
+  }
+}
+
+// Small devices and Phones (991px and less)
+@media (max-width: 991px) {
+  .navbar{
+    .navbar-brand{
+      #navbar-logo{
+        display:none;
+      }
+      #navbar-logo-alt{
+        display:block;
+      }
+    }
+  }
+}
+
+// small devices (tablets)
+@media (min-width: 768px) and (max-width: 991px) {
+  // GENERAL
+  body{
+    margin-bottom:650px;
+  }
+  .navbar{
+    .container-fluid{
+      padding-left:25px;
+      padding-right:25px;
+    }
+  }
+}
+
+// extra small devices (phones)
+@media (max-width: 767px){
+  // GENERAL
+  body{
+    margin-bottom:775px;
+  }
+  .navbar{
+    min-height:81px;
+    .navbar-toggle{
+      margin-top:21px;
+    }
+    .navbar-collapse{
+      margin-top:21px;
+    }
+  }
+  #hero{
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+
+  // FOOTER
+  #footer{
+    height:775px;
+    #footer-text{
+      text-align:center;
+    }
+    img{
+      margin-left:auto;
+      margin-right:auto;
+    }
+    #gov-links{
+      text-align:center;
+    }
+    #disclaimer{
+      text-align:center;
+    }
+  }
 }
