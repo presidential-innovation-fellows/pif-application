@@ -125,8 +125,14 @@ body {
     #footer #disclaimer p {
       padding-top: 5px; }
 
+#hero {
+  margin-top: 81px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #D8D8D8; }
+
 #header {
-  margin-top: 125px; }
+  margin-top: 75px; }
 
 #content {
   margin-bottom: 100px; }
