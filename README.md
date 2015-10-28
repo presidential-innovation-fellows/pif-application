@@ -4,4 +4,4 @@ This repo contains the core files used for the SalesForce implementation of the 
 
 To run the SASS converter use the following line in terminal within the /sass folder
 
-'sass --watch stylesheet.scss:stylesheet.css'
+    sass --watch stylesheet.scss:stylesheet.css
