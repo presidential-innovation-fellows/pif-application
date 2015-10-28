@@ -133,6 +133,12 @@ body {
 
 #header {
   margin-top: 75px; }
+  #header p {
+    padding-top: 30px;
+    margin-bottom: 0px; }
+  #header ul li {
+    margin-left: 0px;
+    margin-right: 4px; }
 
 #content {
   margin-bottom: 100px; }

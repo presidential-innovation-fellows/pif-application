@@ -203,6 +203,16 @@ body{
 // application
 #header{
   margin-top:75px;
+  p{
+    padding-top:30px;
+    margin-bottom:0px;
+  }
+  ul{
+    li{
+      margin-left:0px;
+      margin-right:4px;
+    }
+  }
 }
 #content{
   margin-bottom:100px;
