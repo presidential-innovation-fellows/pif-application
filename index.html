@@ -497,7 +497,7 @@ var urlParams;
 
 // Populates the referral code field
 $(function() {
-  var ref = urlParams["ref"];
+  var ref = urlParams["utm_source"];
   if (typeof ref !== 'undefined') {
   document.getElementById('frmReferral').value = ref
   }
