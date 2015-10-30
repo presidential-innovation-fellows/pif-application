@@ -124,7 +124,7 @@ body {
       color: #eeeeee; }
     #footer #disclaimer p {
       padding-top: 5px; }
-  #footer #white-house-logo img {
+  #footer #appPage\:white-house-logo {
     max-width: 100%;
     height: auto; }
 
@@ -155,17 +155,17 @@ body {
   .navbar .container-fluid {
     padding-left: 50px;
     padding-right: 50px; }
-  .navbar .navbar-brand #navbar-logo-alt {
+  .navbar .navbar-brand #appPage\:navbar-logo-alt {
     display: none; }
-  .navbar .navbar-brand #navbar-logo {
+  .navbar .navbar-brand #appPage\:navbar-logo {
     display: block; } }
 @media (max-width: 1000px) {
   body {
     padding: 0px; } }
 @media (max-width: 991px) {
-  .navbar .navbar-brand #navbar-logo {
+  .navbar .navbar-brand #appPage\:navbar-logo {
     display: none; }
-  .navbar .navbar-brand #navbar-logo-alt {
+  .navbar .navbar-brand #appPage\:navbar-logo-alt {
     display: block; } }
 @media (min-width: 768px) and (max-width: 991px) {
   body {
