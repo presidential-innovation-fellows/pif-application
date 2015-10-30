@@ -495,14 +495,15 @@ var urlParams;
        urlParams[decode(match[1])] = decode(match[2]);
 })();
 
-// Populates the referral code field
+// Populates the referral code fields
 $(function() {
   var ref = urlParams["utm_source"];
   if (typeof ref !== 'undefined') {
-  document.getElementById('frmReferral').value = ref
+  document.getElementById('frmReferral').value = ref;
   }
+  document.getElementById('frmReferralMedium').value = urlParams["utm_medium"];
+  document.getElementById('frmReferralCampaign').value = urlParams["utm_campaign"];
 });
-
 
 </script>
 
@@ -992,6 +993,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <p>
     <label for="frmReferral">Where did you learn about the Presidential Innovation Fellows?</label><br />
     <input id="frmReferral" maxlength="40" name="frmReferral" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}" placeholder="Enter Referral Information Here" size="40" title="Referral Source" type="text" /><input id="appPage:appForm:hiddenReferral" type="hidden" name="appPage:appForm:hiddenReferral" />
+
+    <input id="frmReferralMedium" type="hidden" name="frmReferralMedium" value="">
+    <input id="frmReferralCampaign" type="hidden" name="frmReferralCampaign" value="">
+
   </p>
 
   <p>
