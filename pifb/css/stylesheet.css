@@ -124,6 +124,9 @@ body {
       color: #eeeeee; }
     #footer #disclaimer p {
       padding-top: 5px; }
+  #footer #white-house-logo {
+    max-width: 100%;
+    height: auto; }
 
 #hero {
   margin-top: 81px;

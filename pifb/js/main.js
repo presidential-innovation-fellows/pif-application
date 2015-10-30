@@ -439,10 +439,12 @@ var urlParams;
     urlParams[decode(match[1])] = decode(match[2]);
 })();
 
-// Populates the referral code field
+// Populates the referral code fields
 $(function() {
-  var ref = urlParams["ref"];
+  var ref = urlParams["utm_source"];
   if (typeof ref !== 'undefined') {
-    document.getElementById('frmReferral').value = ref
+    document.getElementById('frmReferral').value = ref;
   }
+  document.getElementById('frmReferralMedium').value = urlParams["utm_medium"];
+  document.getElementById('frmReferralCampaign').value = urlParams["utm_campaign"];
 });
